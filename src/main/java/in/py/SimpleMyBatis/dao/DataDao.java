@@ -39,7 +39,7 @@ public interface DataDao {
 	@Delete(deleteUser)
 	public int deleteUser(@Param("id") int id);
 
-	public String updateUserDetails = "UPDATE users SET name = #{name}, pwd = #{pwd}, id = #{id} WHERE id = #{paramId} ";
+	public String updateUserDetails = "UPDATE users SET name = #{name} WHERE id = #{paramId} ";
 
 	@Update(updateUserDetails)
 	public int updateUserDetails(@Param("name") String name, @Param("pwd") String pwd, @Param("id") int id,
